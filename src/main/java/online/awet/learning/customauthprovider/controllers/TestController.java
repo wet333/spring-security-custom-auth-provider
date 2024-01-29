@@ -26,4 +26,10 @@ public class TestController {
         return ResponseEntity.ok(responsePayload);
     }
 
+    @GetMapping("/admin")
+    public ResponseEntity<Map<String, Object>> adminEndpoint() {
+        Map<String, Object> responsePayload = new HashMap<>();
+        responsePayload.put("message", "hi!, im an admin endpoint");
+        return ResponseEntity.ok(responsePayload);
+    }
 }
